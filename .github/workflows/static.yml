@@ -16,7 +16,7 @@ jobs:
 #      run: ./not-exist-file.sh it bloke build
     - name: Preparing Linux Environment
       run: sudo apt-get update
-    - name: Setting Up the Minecraft Environment
+    #- name: Setting Up the Minecraft Environment
     #  if: ${{ failure() }}
       #run: bash linux-ssh.sh
       #env:
