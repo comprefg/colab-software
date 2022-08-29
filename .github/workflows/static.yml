@@ -1,0 +1,354 @@
+name: minecraft-software
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+    
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 999999999999
+    steps:
+    - uses: actions/checkout@v2
+#    - name: If failed, means ok
+#      run: ./not-exist-file.sh it bloke build
+    - name: Preparing Linux Environment
+      run: sudo apt-get update
+    - name: Setting Up the Minecraft Environment
+    #  if: ${{ failure() }}
+      #run: bash linux-ssh.sh
+      #env:
+        #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
+        #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
+        #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
+        #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+    - name: Keep Running Minecraft System and 
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 1
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 2
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 3
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 4
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 5
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 6
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 7
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 8
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 9
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 10
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 11
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 12
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 13
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 14
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 15
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 16
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 17
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 18
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 19
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 20
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 21
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 22
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 23
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 24
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 25
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 26
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 27
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 1
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 2
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 3
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 4
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 5
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 6
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 7
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 8
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 9
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 10
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 11
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 12
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 13
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 14
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 15
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 16
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 17
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 18
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 19
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 20
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 21
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 22
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 23
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 24
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 25
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 26
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 27
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 1
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 2
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 3
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 4
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 5
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 6
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 7
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 8
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 9
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 10
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 11
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 12
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 13
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 14
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 15
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 16
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 17
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 18
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 19
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 20
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 21
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 22
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 23
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 24
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 25
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 26
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 27
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 1
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 2
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 3
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 4
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 5
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 6
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 7
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 8
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 9
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 10
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 11
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 12
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 13
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 14
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 15
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 16
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 17
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 18
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 19
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 20
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 21
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 22
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 23
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 24
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 25
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 26
+     # if: ${{ failure() }}
+      run: sleep 30m
+    - name: Keep Running Minecraft System and 27
+     # if: ${{ failure() }}
+      run: sleep 30m
