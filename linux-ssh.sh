@@ -1,11 +1,11 @@
 if [[ -z "$NGROK_AUTH_TOKEN" ]]; then
   echo "Please set 'NGROK_AUTH_TOKEN'"
-  exit 2
+  #exit 2
 fi
 
 if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   echo "Please set 'LINUX_USER_PASSWORD' for user: $USER"
-  exit 3
+  #exit 3
 fi
 
 echo "### Install ngrok ###"
