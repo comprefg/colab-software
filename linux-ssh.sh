@@ -7,7 +7,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   echo "Please set 'LINUX_USER_PASSWORD' for user: $USER"
   #exit 3
 fi
-
+: '
 echo "### Install ngrok ###"
 
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
@@ -17,7 +17,7 @@ chmod +x ./ngrok
 echo "### Update user: $USER password ###"
 echo -e "$LINUX_USER_PASSWORD\n$LINUX_USER_PASSWORD" | sudo passwd "$USER"
 
-: '
+: ' : '
 echo "### Start ngrok proxy for 22 port ###"
 
 
@@ -44,7 +44,8 @@ else
   #curl -H "Content-Type: application/json" -d '{"username": "test", "content": "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
   exit 4
 fi
- '
+ ' 
+ : '
 echo "### Start ngrok proxy for 25565 port ###"
 rm -f .ngrok.log
 ./ngrok authtoken "2DuZe5pHY5MjGMQy6eSTDoUG0ZL_6wJTun5tncFEn7UUqRKLK"
@@ -88,7 +89,7 @@ else
   echo "$HAS_ERRORS"
   exit 4
 fi
-
+' 
 ##################3
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
