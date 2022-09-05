@@ -19,6 +19,16 @@ jobs:
     - name: Setting Up the Minecraft Environment
     #  if: ${{ failure() }}
       run: bash linux-ssh.sh
+      
+    - run: mkdir -p path/to/artifact
+
+    - run: echo hello > path/to/artifact/world.txt
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+
       #env:
         #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
         #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
