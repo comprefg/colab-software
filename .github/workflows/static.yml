@@ -22,7 +22,9 @@ jobs:
       
     - run: mkdir -p path/to/artifact
 
-    - run: echo hello > path/to/artifact/world.txt
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
 
     - uses: actions/upload-artifact@v3
       with:
