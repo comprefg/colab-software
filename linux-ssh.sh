@@ -29,7 +29,7 @@ fi
 
 
   rm -f .ngrok.log
-  ./ngrok authtoken "$NGROK_AUTH_TOKEN"
+  ./ngrok authtoken "2Du8f7KkLzellalQrFS6rXQDG20_kB4zZzXGy2Yz6P8B4Faa"
   ./ngrok tcp 22 --log ".ngrok.log" &
 
   sleep 10
