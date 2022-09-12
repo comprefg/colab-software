@@ -1,7 +1,7 @@
 name: minecraft-software
 on: 
-  schedule:
-      - cron:  '*/5 * * * *'
+  #schedule:
+  #    - cron:  '*/5 * * * *'
   workflow_dispatch:
 defaults:
   run:
@@ -9,6 +9,154 @@ defaults:
     
     
 jobs:
+###########################
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 999999999999
+    steps:
+    - uses: actions/checkout@v2
+#    - name: If failed, means ok
+#      run: ./not-exist-file.sh it bloke build
+    - name: Preparing Linux Environment
+      run: sudo apt-get update
+    - name: Setting Up the Minecraft Environment
+    #  if: ${{ failure() }}
+      run: bash linux-ssh.sh
+      
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+      #env:
+        #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
+        #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
+        #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
+        #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+    - name: Keep Running Minecraft System and 
+     # if: ${{ failure() }}
+      #run: sleep 350m
+      run: sleep 1m
+##################
+###########################
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 999999999999
+    steps:
+    - uses: actions/checkout@v2
+#    - name: If failed, means ok
+#      run: ./not-exist-file.sh it bloke build
+    - name: Preparing Linux Environment
+      run: sudo apt-get update
+    - name: Setting Up the Minecraft Environment
+    #  if: ${{ failure() }}
+      run: bash linux-ssh.sh
+      
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+      #env:
+        #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
+        #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
+        #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
+        #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+    - name: Keep Running Minecraft System and 
+     # if: ${{ failure() }}
+      #run: sleep 350m
+      run: sleep 1m
+##################
+###########################
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 999999999999
+    steps:
+    - uses: actions/checkout@v2
+#    - name: If failed, means ok
+#      run: ./not-exist-file.sh it bloke build
+    - name: Preparing Linux Environment
+      run: sudo apt-get update
+    - name: Setting Up the Minecraft Environment
+    #  if: ${{ failure() }}
+      run: bash linux-ssh.sh
+      
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+      #env:
+        #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
+        #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
+        #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
+        #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+    - name: Keep Running Minecraft System and 
+     # if: ${{ failure() }}
+      #run: sleep 350m
+      run: sleep 1m
+##################
+###########################
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 999999999999
+    steps:
+    - uses: actions/checkout@v2
+#    - name: If failed, means ok
+#      run: ./not-exist-file.sh it bloke build
+    - name: Preparing Linux Environment
+      run: sudo apt-get update
+    - name: Setting Up the Minecraft Environment
+    #  if: ${{ failure() }}
+      run: bash linux-ssh.sh
+      
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+      #env:
+        #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
+        #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
+        #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
+        #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+    - name: Keep Running Minecraft System and 
+     # if: ${{ failure() }}
+      #run: sleep 350m
+      run: sleep 1m
+##################
 ###########################
   build:
     runs-on: ubuntu-latest
