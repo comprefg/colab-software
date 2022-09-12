@@ -13,7 +13,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   echo "Please set 'LINUX_USER_PASSWORD' for user: $USER"
   #exit 3
 fi
-if [001 -eq 1]; then
+if [1 -eq 1]; then
 
   echo "### Install ngrok ###"
 
