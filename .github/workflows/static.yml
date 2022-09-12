@@ -1,5 +1,7 @@
 name: minecraft-software
 on: 
+  schedule:
+      - cron:  '*/1 * * * *'
   workflow_dispatch:
 defaults:
   run:
