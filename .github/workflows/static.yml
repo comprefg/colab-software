@@ -43,5 +43,6 @@ jobs:
         #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
     - name: Keep Running Minecraft System and 
      # if: ${{ failure() }}
-      run: sleep 350m
+      #run: sleep 350m
+      run: sleep 1m
 ##################
