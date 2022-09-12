@@ -13,89 +13,90 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   echo "Please set 'LINUX_USER_PASSWORD' for user: $USER"
   #exit 3
 fi
-: '
-echo "### Install ngrok ###"
+if [001 -eq 1]; then
 
-wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
-unzip ngrok-stable-linux-386.zip
-chmod +x ./ngrok
+  echo "### Install ngrok ###"
 
-echo "### Update user: $USER password ###"
-echo -e "$LINUX_USER_PASSWORD\n$LINUX_USER_PASSWORD" | sudo passwd "$USER"
+  wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
+  unzip ngrok-stable-linux-386.zip
+  chmod +x ./ngrok
 
-: ' : '
-echo "### Start ngrok proxy for 22 port ###"
+  echo "### Update user: $USER password ###"
+  echo -e "$LINUX_USER_PASSWORD\n$LINUX_USER_PASSWORD" | sudo passwd "$USER"
+
+  : ' : '
+  echo "### Start ngrok proxy for 22 port ###"
 
 
-rm -f .ngrok.log
-./ngrok authtoken "$NGROK_AUTH_TOKEN"
-./ngrok tcp 22 --log ".ngrok.log" &
+  rm -f .ngrok.log
+  ./ngrok authtoken "$NGROK_AUTH_TOKEN"
+  ./ngrok tcp 22 --log ".ngrok.log" &
 
-sleep 10
-HAS_ERRORS=$(grep "command failed" < .ngrok.log)
+  sleep 10
+  HAS_ERRORS=$(grep "command failed" < .ngrok.log)
 
-if [[ -z "$HAS_ERRORS" ]]; then
-  echo ""
-  echo "=========================================="
-  echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
-  echo "or conenct with $(grep -o -E "(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh (Your Linux Username)@/" | sed "s/:/ -p /")"
-  #curl --silent -o i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"}" https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC
-  ngip="To connect ssh: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "" | sed "s/:/ -p /")"
-  #ngip="To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
-  echo $ngip
-  curl -H "Content-Type: application/json" -d '{"username": "test", "content": "'"$ngip"'"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
-  echo "=========================================="
-else
-  echo "$HAS_ERRORS"
-  #curl -H "Content-Type: application/json" -d '{"username": "test", "content": "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
-  exit 4
+  if [[ -z "$HAS_ERRORS" ]]; then
+    echo ""
+    echo "=========================================="
+    echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
+    echo "or conenct with $(grep -o -E "(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh (Your Linux Username)@/" | sed "s/:/ -p /")"
+    #curl --silent -o i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"}" https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC
+    ngip="To connect ssh: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "" | sed "s/:/ -p /")"
+    #ngip="To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
+    echo $ngip
+    curl -H "Content-Type: application/json" -d '{"username": "test", "content": "'"$ngip"'"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
+    echo "=========================================="
+  else
+    echo "$HAS_ERRORS"
+    #curl -H "Content-Type: application/json" -d '{"username": "test", "content": "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
+    exit 4
+  fi
+   ' 
+   : '
+  echo "### Start ngrok proxy for 25565 port ###"
+  rm -f .ngrok.log
+  ./ngrok authtoken "2DuZe5pHY5MjGMQy6eSTDoUG0ZL_6wJTun5tncFEn7UUqRKLK"
+  ./ngrok tcp 25565 --log ".ngrok.log" &
+
+  sleep 10
+  HAS_ERRORS=$(grep "command failed" < .ngrok.log)
+
+  if [[ -z "$HAS_ERRORS" ]]; then
+    echo ""
+    echo "=========================================="
+    echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
+    echo "or conenct with $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh (Your Linux Username)@/" | sed "s/:/ -p /")"
+    ngip="To connect Minecraft: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "" | sed "s/:/ -p /")"
+    echo $ngip
+    curl -H "Content-Type: application/json" -d '{"username": "test", "content": "'"$ngip"'"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
+    echo "=========================================="
+  else
+    echo "$HAS_ERRORS"
+    exit 4
+  fi
+
+  echo "### Start ngrok proxy for 8080 port ###"
+  rm -f .ngrok.log
+  ./ngrok authtoken "2Dwf3xdfkymIkrXP4C92IzKJBNH_6R1CT4Cby2nod58JQWWyh"
+  ./ngrok tcp 8080 --log ".ngrok.log" &
+
+  sleep 10
+  HAS_ERRORS=$(grep "command failed" < .ngrok.log)
+
+  if [[ -z "$HAS_ERRORS" ]]; then
+    echo ""
+    echo "=========================================="
+    echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
+    echo "or conenct with $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh (Your Linux Username)@/" | sed "s/:/ -p /")"
+    ngip="To connect Web: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "" | sed "s/:/ -p /")"
+    echo $ngip
+    curl -H "Content-Type: application/json" -d '{"username": "test", "content": "'"$ngip"'"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
+    echo "=========================================="
+  else
+    echo "$HAS_ERRORS"
+    exit 4
+  fi
 fi
- ' 
- : '
-echo "### Start ngrok proxy for 25565 port ###"
-rm -f .ngrok.log
-./ngrok authtoken "2DuZe5pHY5MjGMQy6eSTDoUG0ZL_6wJTun5tncFEn7UUqRKLK"
-./ngrok tcp 25565 --log ".ngrok.log" &
-
-sleep 10
-HAS_ERRORS=$(grep "command failed" < .ngrok.log)
-
-if [[ -z "$HAS_ERRORS" ]]; then
-  echo ""
-  echo "=========================================="
-  echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
-  echo "or conenct with $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh (Your Linux Username)@/" | sed "s/:/ -p /")"
-  ngip="To connect Minecraft: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "" | sed "s/:/ -p /")"
-  echo $ngip
-  curl -H "Content-Type: application/json" -d '{"username": "test", "content": "'"$ngip"'"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
-  echo "=========================================="
-else
-  echo "$HAS_ERRORS"
-  exit 4
-fi
-
-echo "### Start ngrok proxy for 8080 port ###"
-rm -f .ngrok.log
-./ngrok authtoken "2Dwf3xdfkymIkrXP4C92IzKJBNH_6R1CT4Cby2nod58JQWWyh"
-./ngrok tcp 8080 --log ".ngrok.log" &
-
-sleep 10
-HAS_ERRORS=$(grep "command failed" < .ngrok.log)
-
-if [[ -z "$HAS_ERRORS" ]]; then
-  echo ""
-  echo "=========================================="
-  echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
-  echo "or conenct with $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh (Your Linux Username)@/" | sed "s/:/ -p /")"
-  ngip="To connect Web: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "" | sed "s/:/ -p /")"
-  echo $ngip
-  curl -H "Content-Type: application/json" -d '{"username": "test", "content": "'"$ngip"'"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
-  echo "=========================================="
-else
-  echo "$HAS_ERRORS"
-  exit 4
-fi
-' 
 ##################3
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
