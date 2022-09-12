@@ -13,7 +13,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   echo "Please set 'LINUX_USER_PASSWORD' for user: $USER"
   #exit 3
 fi
-if [1 -eq 1]; then
+#if [1 -eq 1]; then
 
   echo "### Install ngrok ###"
 
@@ -96,7 +96,8 @@ if [1 -eq 1]; then
     echo "$HAS_ERRORS"
     exit 4
   fi
-fi
+  echo "### ngrok done ###"
+#fi
 ##################3
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
