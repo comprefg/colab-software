@@ -10,11 +10,41 @@ defaults:
     
 jobs:
 ###########################
+  setup:
+    #needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 999999999999
+    steps:
+    - uses: actions/checkout@v2
+#    - name: If failed, means ok
+#      run: ./not-exist-file.sh it bloke build
+    - name: Preparing Linux Environment
+      run: sudo apt-get update
+    - name: Setting Up the Minecraft Environment
+    #  if: ${{ failure() }}
+      run: bash setup.sh
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: past
+        path: /home/runner
+
+      #env:
+        #LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
+        #NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
+        #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
+        #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+    
+##################
   build:
     #needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: past
     - uses: actions/checkout@v2
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
