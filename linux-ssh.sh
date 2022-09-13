@@ -101,16 +101,16 @@ fi
 #fi
 ##################3
 '
-mkdir /etc/playit
-mkdir ~/playit
-ln -s /etc/playit ~/playit
+
+ln -s ~/playit /etc/playit 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
 sudo apt update
 sudo apt install playit
 
 #tmux new-session -d -s my_session 'playit'
-
+ln -s ~/pufferpanel /srv/pufferpanel/
+ln -s ~/pufferd /var/lib/pufferd
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
 sudo apt-get install pufferpanel
