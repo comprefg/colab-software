@@ -51,4 +51,4 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #java -jar paper-1.16.5-790.jar
 tmux new-session -d -s my_session 'playit'
 #playit
-tar -czf past.tar.gz ~
+tar -czf past.tar.gz ~/
