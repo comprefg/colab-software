@@ -14,6 +14,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   #exit 3
 fi
 #if [1 -eq 1]; then
+: '
 
   echo "### Install ngrok ###"
 
@@ -97,8 +98,17 @@ fi
     exit 4
   fi
   echo "### ngrok done ###"
-#fi
+#fi'
 ##################3
+mkdir /etc/playit
+mkdir ~/playit
+ln -s /etc/playit ~/playit
+curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
+sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
+sudo apt update
+sudo apt install playit
+screen -S playit
+playit
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
 sudo apt-get install pufferpanel
