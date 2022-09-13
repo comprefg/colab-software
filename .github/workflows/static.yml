@@ -45,5 +45,5 @@ jobs:
     - name: Keep Running Minecraft System and 
      # if: ${{ failure() }}
       #run: sleep 350m
-      run: sleep 59m
+      run: sleep 590m
 ##################
