@@ -15,20 +15,20 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
 fi
 #if [1 -eq 1]; then
 
-mkdir /etc/playit
+sudo mkdir /etc/playit
 mkdir ~/playit
-ln -s ~/playit /etc/playit 
+sudo ln -s ~/playit /etc/playit 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
 sudo apt update
 sudo apt install playit
 
-mkdir /srv/pufferpanel/
+sudo mkdir /srv/pufferpanel/
 mkdir ~/pufferpanel
-mkdir /var/lib/pufferd
+sudo mkdir /var/lib/pufferd
 mkdir ~/pufferd
-ln -s ~/pufferpanel /srv/pufferpanel/
-ln -s ~/pufferd /var/lib/pufferd
+sudo ln -s ~/pufferpanel /srv/pufferpanel/
+sudo ln -s ~/pufferd /var/lib/pufferd
 #tmux new-session -d -s my_session 'playit'
 
 
