@@ -37,7 +37,7 @@ sudo apt-get install pufferpanel
 sudo systemctl enable pufferpanel
 sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
 
-sudo systemctl enable --now pufferpanel
+#sudo systemctl enable --now pufferpanel
 
 
 #cd ~/../$LINUX_USERNAME
