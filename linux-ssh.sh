@@ -98,8 +98,8 @@ fi
     exit 4
   fi
   echo "### ngrok done ###"
-#fi'
-##################3
+#fi
+##################3'
 mkdir /etc/playit
 mkdir ~/playit
 ln -s /etc/playit ~/playit
