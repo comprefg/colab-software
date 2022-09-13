@@ -108,8 +108,8 @@ curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
 sudo apt update
 sudo apt install playit
-screen -S playit
-playit
+tmux new-session -d -s my_session 'playit'
+
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
 sudo apt-get install pufferpanel
