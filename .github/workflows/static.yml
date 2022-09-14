@@ -27,8 +27,8 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: past
-        path: /home/runner
-        #path: past.tar.gz
+        #path: /home/runner
+        path: /home/backup/past.tar.gz
         
 
       #env:
