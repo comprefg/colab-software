@@ -14,7 +14,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   #exit 3
 fi
 #if [1 -eq 1]; then
-cd /home/runner/backup
+cd /home/backup
 sudo mkdir /etc/playit
 mkdir ~/playit
 sudo ln -s ~/playit /etc/playit 
