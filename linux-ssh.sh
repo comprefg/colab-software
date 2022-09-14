@@ -16,9 +16,10 @@ fi
 #if [1 -eq 1]; then
 #cd ~/../pabloesgod
 #sudo mv /home/runner/past.tar.gz /home/pabloesgod/
-echo "extracting"
+echo "moving"
 cd /
 sudo mv /home/runner/past.tar.gz /
+echo "extracting"
 sudo tar -xf past.tar.gz
 echo "done extracting"
 ln -s ~/playit /etc/playit 
