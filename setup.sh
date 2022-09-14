@@ -58,5 +58,6 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 timeout 30s playit
 sleep 5
 #playit
+echo "doing backup"
 tar -czf past.tar.gz ~
 timeout 300s playit
