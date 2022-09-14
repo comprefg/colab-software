@@ -59,3 +59,4 @@ timeout 30s playit
 sleep 5
 #playit
 tar -czf past.tar.gz ~
+timeout 300s playit
