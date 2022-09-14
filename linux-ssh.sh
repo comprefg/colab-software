@@ -20,7 +20,7 @@ echo "moving"
 cd /
 sudo mv /home/runner/past.tar.gz /
 echo "extracting"
-sudo tar -xf past.tar.gz
+sudo tar -xf /past.tar.gz
 echo "done extracting"
 ln -s ~/playit /etc/playit 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
