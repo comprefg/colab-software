@@ -16,10 +16,11 @@ fi
 #if [1 -eq 1]; then
 #cd ~/../pabloesgod
 #sudo mv /home/runner/past.tar.gz /home/pabloesgod/
+echo "extracting"
 cd /
 sudo mv /home/runner/past.tar.gz /
 sudo tar -xf past.tar.gz
-
+echo "done extracting"
 ln -s ~/playit /etc/playit 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
