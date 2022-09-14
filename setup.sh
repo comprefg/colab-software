@@ -1,6 +1,6 @@
-sudo useradd -m pablogod
-sudo adduser pablogod sudo
-echo "pablogod:pabloesgod" | sudo chpasswd
+sudo useradd -m backup
+sudo adduser backup sudo
+echo "backup:pabloesgod" | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo hostname $LINUX_MACHINE_NAME
 
@@ -14,7 +14,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   #exit 3
 fi
 #if [1 -eq 1]; then
-
+cd /home/runner/backup
 sudo mkdir /etc/playit
 mkdir ~/playit
 sudo ln -s ~/playit /etc/playit 
