@@ -55,7 +55,7 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #do
 #  sleep 2
 #done
-timeout 180s playit
-sleep 20
+timeout 30s playit
+sleep 5
 #playit
 tar -czf past.tar.gz ~
