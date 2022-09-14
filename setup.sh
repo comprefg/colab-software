@@ -59,5 +59,5 @@ timeout 30s playit
 sleep 5
 #playit
 echo "doing backup"
-tar -czf past.tar.gz ~
-timeout 300s playit
+sudo tar -czf past.tar.gz ~/
+timeout 60s playit
