@@ -48,10 +48,10 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: past
-        path: /home/pablogod/past.tar.gz
+        path: /home/runner/past.tar.gz
     - name: Display structure of downloaded files
       run: ls -R
-      working-directory: path/to/artifact
+      working-directory: /home/runner
     - uses: actions/checkout@v2
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
