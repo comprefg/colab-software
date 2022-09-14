@@ -27,8 +27,8 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: past
-        #path: /home/runner
-        path: /home/pablogod/past.tar.gz
+        path: /home/pablogod
+        #path: /home/pablogod/past.tar.gz
         
 
       #env:
