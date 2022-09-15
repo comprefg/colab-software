@@ -49,9 +49,6 @@ jobs:
       with:
         name: past
         path: /home/runner/past.tar.gz
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: /home/runner
     - uses: actions/checkout@v2
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
