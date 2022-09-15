@@ -59,4 +59,4 @@ timeout 30s playit
 sleep 5
 #playit
 echo "doing backup"
-sudo tar -czf past.tar.gz /home/runner/pablogod
+sudo tar -czf past.tar.gz /home/runner/pablogod/
