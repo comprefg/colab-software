@@ -56,7 +56,7 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #  sleep 2
 #done
 timeout 30s playit
-sleep 20
+sleep 1
 #playit
 echo "doing backup"
 cd /home/runner
