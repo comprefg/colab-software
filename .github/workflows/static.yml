@@ -28,7 +28,7 @@ jobs:
       with:
         name: past
         #path: /home/pablogod
-        path: /home/pablogod/past.tar.gz
+        path: /home/runner/past.tar.gz
         
 
       #env:
