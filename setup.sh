@@ -20,6 +20,7 @@ cd /home/pablogod
 sudo mkdir /home/pablogod/playit
 sudo ln -s /home/pablogod/playit /etc/
 sudo mkdir /home/pablogod/opt/playit
+sudo mkdir /home/pablogod/opt/
 sudo ln -s /home/pablogod/opt/playit /opt/
 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
