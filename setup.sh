@@ -57,7 +57,7 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #done
 curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Configure Playit"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
 timeout 180s playit
-sleep 1
+sleep 30
 #playit
 echo "doing backup"
 cd /home/runner
