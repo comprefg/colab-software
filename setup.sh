@@ -14,6 +14,7 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   #exit 3
 fi
 #if [1 -eq 1]; then
+sudo su pablogod
 cd /home/pablogod
 sudo mkdir /etc/playit
 sudo mkdir /home/pablogod/playit
