@@ -21,8 +21,8 @@ sudo mkdir /home/pablogod/playit
 sudo ln -s /home/pablogod/playit /etc/playit 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
-sudo apt update
-sudo apt install playit
+sudo apt -qq update
+sudo apt -qq install playit
 
 sudo mkdir /srv/pufferpanel/
 sudo mkdir /home/pablogod/pufferpanel
@@ -34,7 +34,7 @@ sudo ln -s /home/pablogod/pufferd /var/lib/pufferd
 
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
-sudo apt-get install pufferpanel
+sudo apt-get -qq install pufferpanel
 sudo systemctl enable pufferpanel
 sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
 
