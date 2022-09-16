@@ -25,6 +25,8 @@ sudo tar -xf /past.tar.gz
 echo "done extracting"
 cd ~/../pabloesgod
 sudo ln -s ~/playit /etc/ 
+sudo ln -s ~/opt/playit /opt/ 
+
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
 sudo apt update
