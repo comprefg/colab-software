@@ -16,7 +16,7 @@ fi
 #if [1 -eq 1]; then
 #cd ~/../pabloesgod
 #sudo mv /home/runner/past.tar.gz /home/pabloesgod/
-sudo su pabloesgod
+sudo su pablogod
 echo "moving"
 cd /
 sudo mv /home/runner/past.tar.gz /
