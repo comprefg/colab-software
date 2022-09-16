@@ -16,7 +16,7 @@ fi
 #if [1 -eq 1]; then
 cd /home/pablogod
 sudo mkdir /etc/playit
-mkdir /home/pablogod/playit
+sudo mkdir /home/pablogod/playit
 sudo ln -s /home/pablogod/playit /etc/playit 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
@@ -24,9 +24,9 @@ sudo apt update
 sudo apt install playit
 
 sudo mkdir /srv/pufferpanel/
-mkdir /home/pablogod/pufferpanel
+sudo mkdir /home/pablogod/pufferpanel
 sudo mkdir /var/lib/pufferd
-mkdir /home/pablogod/pufferd
+sudo mkdir /home/pablogod/pufferd
 sudo ln -s /home/pablogod/pufferpanel /srv/pufferpanel/
 sudo ln -s /home/pablogod/pufferd /var/lib/pufferd
 #tmux new-session -d -s my_session 'playit'
