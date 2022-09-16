@@ -48,7 +48,7 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: past
-        path: /home/runner/past.tar.gz
+        path: /home/runner/
     - uses: actions/checkout@v2
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
