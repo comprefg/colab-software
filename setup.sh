@@ -18,7 +18,10 @@ sudo su pablogod
 cd /home/pablogod
 #sudo mkdir /etc/playit
 sudo mkdir /home/pablogod/playit
-sudo ln -s /home/pablogod/playit /etc/ 
+sudo ln -s /home/pablogod/playit /etc/
+sudo mkdir /home/pablogod/opt/playit
+sudo ln -s /home/pablogod/opt/playit /opt/
+
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
 sudo apt -qq update
