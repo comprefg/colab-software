@@ -19,8 +19,8 @@ cd /home/pablogod
 #sudo mkdir /etc/playit
 sudo mkdir /home/pablogod/playit
 sudo ln -s /home/pablogod/playit /etc/
-sudo mkdir /home/pablogod/opt/playit
 sudo mkdir /home/pablogod/opt/
+sudo mkdir /home/pablogod/opt/playit
 sudo ln -s /home/pablogod/opt/playit /opt/
 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
@@ -55,7 +55,7 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 
 #java -jar paper-1.16.5-790.jar
 #tmux new-session -d -s my_session 'playit'
-#timeout 60s playit
+#timeout 40s playit
 #while [ ! -f ~../a.txt ]
 #do
 #  sleep 2
