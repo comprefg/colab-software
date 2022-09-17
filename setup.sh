@@ -55,13 +55,13 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 
 #java -jar paper-1.16.5-790.jar
 #tmux new-session -d -s my_session 'playit'
-#timeout 40s playit
+#timeout 60s playit
 #while [ ! -f ~../a.txt ]
 #do
 #  sleep 2
 #done
 curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Configure Playit"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
-sudo timeout 10000s playit
+sudo timeout 30s playit
 sleep 3
 #playit
 echo "doing backup"
