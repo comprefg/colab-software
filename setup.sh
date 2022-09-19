@@ -72,7 +72,8 @@ sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
 sleep 10
 
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
-sudo playit
+sleep 30
+#sudo playit
 echo "doing backup"
 cd /home/runner
 sudo tar -zcf past.tar.gz /home/pablogod/backup/
