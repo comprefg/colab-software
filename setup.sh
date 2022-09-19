@@ -68,7 +68,7 @@ tmux new-session -d -s my_session 'sudo timeout 60s playit 2>&1 | tee somefile.t
 #sudo timeout 60s playit
 sleep 10
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
-#playit
+playit
 echo "doing backup"
 cd /home/runner
 sudo tar -zcf past.tar.gz /home/pablogod/backup/
