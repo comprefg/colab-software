@@ -19,5 +19,5 @@ resp = requests.post(url, headers=headers, data=data)
 
 print(resp.status_code)
 
-print(data.split("link=")[1][:-2])
+print(data)
 print(last_line)
