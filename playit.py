@@ -1,11 +1,5 @@
-a_file = open("/home/pablogod/backup/somefile.txt", "r")
-a_file.readlines()
-lines = a_file.readlines()
 
-#last_lines = lines[0]
-#print(last_lines)
-
-with open('somefile.txt', 'r') as f:
+with open('/home/pablogod/backup/somefile.txt', 'r') as f:
     for line in f:
         pass
     last_line = line
