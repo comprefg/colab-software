@@ -91,10 +91,12 @@ curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Co
   pip install selenium
 #########
 sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
+sleep 10
+python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
 sleep 100000
 
-python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
-sleep 30
+
+
 #sudo playit
 echo "doing backup"
 cd /home/runner
