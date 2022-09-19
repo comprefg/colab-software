@@ -66,7 +66,7 @@ curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Co
 #tmux new-session -d -s my_session 'sudo timeout 60s playit 2>&1 | tee somefile.txt'
 
 #sudo timeout 60s playit
-playit
+sudo playit
 sleep 10
 
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
