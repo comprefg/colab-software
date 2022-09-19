@@ -64,12 +64,34 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #done
 curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Configure Playit"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
 #sudo screen -d -m 'sudo timeout 10s playit 2>&1 | sudo tee /home/pablogod/backup/somefile.txt'
-sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
+#sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
 #sudo screen -d -m 'sudo timeout 30s playit 2>&1 | sudo tee /home/pablogod/backup/somefile.txt'
 #sudo timeout 30s playit 2>&1 | sudo tee /home/pablogod/backup/somefile.txt
 #sudo timeout 60s playit
 #sudo playit
-sleep 10
+########
+  # Install Chrome.
+  sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+  sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+  # Update our system
+  sudo apt-get -y update
+  # Install Chrome
+  sudo apt-get -y install google-chrome-stable
+  # Install Chromedriver
+  wget -N https://chromedriver.storage.googleapis.com/95.0.4638.54/chromedriver_linux64.zip -P ~/
+  unzip ~/chromedriver_linux64.zip -d ~/
+  # Remove zip file
+  rm ~/chromedriver_linux64.zip
+  # Move driver to bin location
+  sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+  # Give it rights
+  sudo chown pablogod:pabloesgod /usr/local/bin/chromedriver
+  sudo chmod 0755 /usr/local/bin/chromedriver
+  # Install Selenium
+  pip install selenium
+#########
+sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
+sleep 100000
 
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
 sleep 30
