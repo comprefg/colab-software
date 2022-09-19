@@ -12,7 +12,7 @@ url = "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHP
 headers = CaseInsensitiveDict()
 headers["Content-Type"] = "application/json"
 
-data = '{"username": "test", "content": "'+last_line.split("link=")[1]+'"}'
+data = '{"username": "test", "content": "'+last_line.split("link=")[1][:-1]+'"}'
 
 
 resp = requests.post(url, headers=headers, data=data)
