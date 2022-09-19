@@ -70,25 +70,21 @@ curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Co
 #sudo timeout 60s playit
 #sudo playit
 ########
+  
   # Install Chrome.
   sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
   sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-  # Update our system
   sudo apt-get -y update
-  # Install Chrome
   sudo apt-get -y install google-chrome-stable
-  # Install Chromedriver
-  wget -N https://chromedriver.storage.googleapis.com/95.0.4638.54/chromedriver_linux64.zip -P ~/
+  # Install ChromeDriver.
+  wget -N https://chromedriver.storage.googleapis.com/79.0.3945.36/chromedriver_linux64.zip -P ~/
   unzip ~/chromedriver_linux64.zip -d ~/
-  # Remove zip file
   rm ~/chromedriver_linux64.zip
-  # Move driver to bin location
   sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
-  # Give it rights
   sudo chown pablogod:pabloesgod /usr/local/bin/chromedriver
   sudo chmod 0755 /usr/local/bin/chromedriver
-  # Install Selenium
   pip install selenium
+
 #########
 sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
 sleep 10
