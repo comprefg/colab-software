@@ -68,4 +68,4 @@ sleep 3
 #playit
 echo "doing backup"
 cd /home/runner
-sudo tar -zcf past.tar.gz /home/pablogod/
+sudo tar -zcf past.tar.gz /home/backup/pablogod/
