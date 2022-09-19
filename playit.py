@@ -15,8 +15,8 @@ headers["Content-Type"] = "application/json"
 data = '{"username": "test", "content": "'+last_line+'"}'
 
 
-resp = requests.post(url, headers=headers, data=data)
+resp = requests.post(url, headers=headers, data=data.split("link=")[1])
 
 print(resp.status_code)
 
-print(data)
+print(data.split("link=")[1])
