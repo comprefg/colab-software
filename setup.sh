@@ -67,7 +67,7 @@ curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Co
 sudo timeout 10s playit 2>&1 | tee /home/pablogod/backup/somefile.txt
 #sudo timeout 60s playit
 #sudo playit
-sleep 30
+sleep 10
 
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
 
