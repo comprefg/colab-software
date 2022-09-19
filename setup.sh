@@ -63,11 +63,11 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #  sleep 2
 #done
 curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Configure Playit"}' "https://ptb.discord.com/api/webhooks/1012830182882685140/coAa8BUhkJJc9EHPAanJ2IECPG9Podh7H3J3cBZPF2_sRqQAOKH-HuKEKuqxr6rBInEC"
-sudo tmux new-session -d -s my_session 'sudo timeout 10s playit 2>&1 | tee /home/pablogod/backup/somefile.txt'
-
+#sudo tmux new-session -d -s my_session 'sudo timeout 10s playit 2>&1 | tee /home/pablogod/backup/somefile.txt'
+sudo timeout 10s playit 2>&1 | tee /home/pablogod/backup/somefile.txt
 #sudo timeout 60s playit
 #sudo playit
-sleep 20
+sleep 30
 
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
 
