@@ -15,13 +15,15 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
 fi
 #if [1 -eq 1]; then
 sudo su pablogod
-cd /home/pablogod
+sudo mkdir /home/pablogod/backup
+cd /home/pablogod/backup
+
 #sudo mkdir /etc/playit
-sudo mkdir /home/pablogod/playit
-sudo ln -s /home/pablogod/playit /etc/
-sudo mkdir /home/pablogod/opt/
-sudo mkdir /home/pablogod/opt/playit
-sudo ln -s /home/pablogod/opt/playit /opt/
+sudo mkdir /home/pablogod/backup/playit
+sudo ln -s /home/pablogod/backup/playit /etc/
+sudo mkdir /home/pablogod/backup/opt/
+sudo mkdir /home/pablogod/backup/opt/playit
+sudo ln -s /home/pablogod/backup/opt/playit /opt/
 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
@@ -29,11 +31,11 @@ sudo apt -qq update
 sudo apt -qq install playit
 
 sudo mkdir /srv/pufferpanel/
-sudo mkdir /home/pablogod/pufferpanel
+sudo mkdir /home/pablogod/backup/pufferpanel
 sudo mkdir /var/lib/pufferd
-sudo mkdir /home/pablogod/pufferd
-sudo ln -s /home/pablogod/pufferpanel /srv/pufferpanel/
-sudo ln -s /home/pablogod/pufferd /var/lib/pufferd
+sudo mkdir /home/pablogod/backup/pufferd
+sudo ln -s /home/pablogod/backup/pufferpanel /srv/pufferpanel/
+sudo ln -s /home/pablogod/backup/pufferd /var/lib/pufferd
 #tmux new-session -d -s my_session 'playit'
 
 
