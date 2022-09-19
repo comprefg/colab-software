@@ -19,3 +19,4 @@ resp = requests.post(url, headers=headers, data=data)
 
 print(resp.status_code)
 
+print(data)
