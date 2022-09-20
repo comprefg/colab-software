@@ -75,7 +75,11 @@ curl -H "Content-Type: application/json" -d '{"username": "test", "content": "Co
   sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
   sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
   sudo apt-get -y update
-  sudo apt-get -y install google-chrome-stable
+  #sudo apt-get -y install google-chrome-stable
+  ARG CHROME_VERSION="79.0.3945.36"
+  RUN wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
+  && apt install -y /tmp/chrome.deb \
+  && rm /tmp/chrome.deb
   # Install ChromeDriver.
   wget -N https://chromedriver.storage.googleapis.com/79.0.3945.36/chromedriver_linux64.zip -P ~/
   unzip ~/chromedriver_linux64.zip -d ~/
