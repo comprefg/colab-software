@@ -54,7 +54,7 @@ def fill(what,where):
     pass
 
 driver = webdriver.Chrome(options=options,service=Service(ChromeDriverManager().install()))
-driver.get("https://playit.gg/claim/cbd7562ebb")
+driver.get(last_line.split("link=")[1][:-1])
 fill("rfgarcia2023@gmail.com","email")
 fill("Er12345re","password")
 driver.execute_script('document.getElementsByClassName("rJHtO")[0].getElementsByTagName("input")[2].click()')
