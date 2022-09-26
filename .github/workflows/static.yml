@@ -57,6 +57,10 @@ jobs:
     - name: Setting Up the Minecraft Environment
     #  if: ${{ failure() }}
       run: bash linux-ssh.sh
+    - name: Keep Running Minecraft System and 
+     # if: ${{ failure() }}
+      #run: sleep 350m
+      run: sleep 590m
       
     - run: mkdir -p path/to/artifact
     - run: echo hello > path/to/artifact/world.txt
@@ -76,8 +80,5 @@ jobs:
         #CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
         #LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
         #LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
-    - name: Keep Running Minecraft System and 
-     # if: ${{ failure() }}
-      #run: sleep 350m
-      run: sleep 590m
+    
 ##################
