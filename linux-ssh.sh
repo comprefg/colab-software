@@ -40,7 +40,7 @@ sudo ln -s ~/pufferd /var/lib/pufferd
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
 sudo apt-get install pufferpanel
 sudo systemctl enable pufferpanel
-sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
+#sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
 
 sudo systemctl enable --now pufferpanel
 
@@ -54,4 +54,4 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 
 
 #java -jar paper-1.16.5-790.jar
-playit
+python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
