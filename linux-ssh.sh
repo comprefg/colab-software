@@ -57,7 +57,7 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 pip install selenium
 
 cd /home/pablogod/backup
-sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
+sudo timeout 600h playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
 sleep 10
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
 sleep 3000
