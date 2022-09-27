@@ -34,8 +34,9 @@ sudo apt install playit
 
 
 #tmux new-session -d -s my_session 'playit'
-sudo ln -s ~/pufferpanel /srv/pufferpanel/
-sudo ln -s ~/pufferd /var/lib/pufferd
+#sudo ln -s ~/pufferpanel /srv/pufferpanel/
+#sudo ln -s ~/pufferd /var/lib/pufferd
+sudo ln -s /home/pablogod/backup/pufferpanel /var/lib/
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
 sudo apt-get install pufferpanel
