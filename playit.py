@@ -61,3 +61,7 @@ driver.execute_script('document.getElementsByClassName("rJHtO")[0].getElementsBy
 time.sleep(5)
 driver.execute_script('document.getElementsByTagName("button")[0].click()')
 time.sleep(10)
+data = '{"username": "test", "content": "in"}'
+
+
+resp = requests.post(url, headers=headers, data=data)
