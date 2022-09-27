@@ -30,9 +30,9 @@ sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud
 sudo apt -qq update
 sudo apt -qq install playit
 
-sudo mkdir /srv/pufferpanel/
+#sudo mkdir /srv/pufferpanel/
 sudo mkdir /home/pablogod/backup/pufferpanel
-sudo mkdir /var/lib/pufferd
+#sudo mkdir /var/lib/pufferd
 sudo mkdir /home/pablogod/backup/pufferd
 sudo ln -s /home/pablogod/backup/pufferpanel /srv/
 sudo ln -s /home/pablogod/backup/pufferd /var/lib/
