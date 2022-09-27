@@ -34,9 +34,9 @@ sudo apt -qq install playit
 sudo mkdir /home/pablogod/backup/pufferpanel
 #sudo mkdir /var/lib/pufferd
 sudo mkdir /home/pablogod/backup/pufferd
-#sudo ln -s /home/pablogod/backup/pufferpanel /srv/
-#sudo ln -s /home/pablogod/backup/pufferd /var/lib/
-sudo ln -s /home/pablogod/backup/pufferpanel /var/lib/
+sudo ln -s /home/pablogod/backup/pufferpanel /srv/
+sudo ln -s /home/pablogod/backup/pufferd /var/lib/
+#sudo ln -s /home/pablogod/backup/pufferpanel /var/lib/
 #tmux new-session -d -s my_session 'playit'
 
 
