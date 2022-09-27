@@ -40,7 +40,7 @@ sudo ln -s ~/pufferd /var/lib/pufferd
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh | sudo bash
 sudo apt-get install pufferpanel
 sudo systemctl enable pufferpanel
-#sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
+sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
 
 sudo systemctl enable --now pufferpanel
 
