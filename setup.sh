@@ -93,7 +93,7 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 sudo timeout 600s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
 sleep 10
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
-sleep 30
+sleep 50
 
 
 
