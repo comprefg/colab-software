@@ -55,8 +55,8 @@ def fill(what,where):
 
 driver = webdriver.Chrome(options=options,service=Service(ChromeDriverManager().install()))
 driver.get(last_line.split("link=")[1][:-1])
-fill("myirlnameisnotsam@gmail.com","12345678")
-fill("Er12345re","password")
+fill("myirlnameisnotsam@gmail.com","email")
+fill("12345678","password")
 driver.execute_script('document.getElementsByClassName("rJHtO")[0].getElementsByTagName("input")[2].click()')
 time.sleep(5)
 driver.execute_script('document.getElementsByTagName("button")[0].click()')
