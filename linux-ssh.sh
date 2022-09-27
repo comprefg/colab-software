@@ -23,6 +23,8 @@ sudo mv /home/runner/past.tar.gz /
 echo "extracting"
 sudo tar -xf /past.tar.gz
 echo "done extracting"
+sudo mv /home/pablogod/backup/pufferpanel /var/lib/pufferpanel
+
 cd ~/../pabloesgod
 ##sudo ln -s ~/playit /etc/ 
 ##sudo ln -s ~/opt/playit /opt/ 
