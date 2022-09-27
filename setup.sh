@@ -34,8 +34,8 @@ sudo mkdir /srv/pufferpanel/
 sudo mkdir /home/pablogod/backup/pufferpanel
 sudo mkdir /var/lib/pufferd
 sudo mkdir /home/pablogod/backup/pufferd
-sudo ln -s /home/pablogod/backup/pufferpanel /srv/pufferpanel/
-sudo ln -s /home/pablogod/backup/pufferd /var/lib/pufferd
+sudo ln -s /home/pablogod/backup/pufferpanel /srv/
+sudo ln -s /home/pablogod/backup/pufferd /var/lib/
 #tmux new-session -d -s my_session 'playit'
 
 
