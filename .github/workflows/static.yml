@@ -1,7 +1,7 @@
 name: minecraft-software
 on: 
-  schedule:
-    - cron:  '*/6 * * * *'
+  #schedule:
+    #- cron:  '*/6 * * * *'
   workflow_dispatch:
 defaults:
   run:
@@ -61,6 +61,7 @@ jobs:
      # if: ${{ failure() }}
       #run: sleep 350m
       #run: sleep 590m
+    - uses: actions/checkout@v2
     - name: Backing up
       run: bash backup.sh
     - uses: actions/upload-artifact@v3
