@@ -84,7 +84,7 @@ jobs:
 ##################
   build1:
     #needs: build
-    needs: setup
+    needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
@@ -127,7 +127,7 @@ jobs:
 ##################
   build2:
     #needs: build
-    needs: setup
+    needs: build1
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
@@ -170,7 +170,7 @@ jobs:
 ##################
   build3:
     #needs: build
-    needs: setup
+    needs: build2
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
@@ -213,7 +213,7 @@ jobs:
 ##################
   build4:
     #needs: build
-    needs: setup
+    needs: build3
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
@@ -256,7 +256,7 @@ jobs:
 ##################
   build5:
     #needs: build
-    needs: setup
+    needs: build4
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
