@@ -61,9 +61,9 @@ jobs:
      # if: ${{ failure() }}
       #run: sleep 350m
       #run: sleep 590m
-    - uses: actions/checkout@v2
-    - name: Backing up
-      run: bash backup.sh
+    #- uses: actions/checkout@v2
+    #- name: Backing up
+      #run: bash backup.sh
     - uses: actions/upload-artifact@v3
       with:
         name: past
