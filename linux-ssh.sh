@@ -63,4 +63,4 @@ cd /home/pablogod/backup
 sudo timeout 600h playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
 sleep 10
 python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
-sleep 3000
+sleep 60
