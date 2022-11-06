@@ -1,7 +1,7 @@
 name: minecraft-software
 on: 
-  schedule:
-    - cron:  '*/6 * * * *'
+  #schedule:
+   # - cron:  '*/6 * * * *'
   workflow_dispatch:
 defaults:
   run:
@@ -60,7 +60,7 @@ jobs:
     - name: Keep Running Minecraft System and 
      # if: ${{ failure() }}
       #run: sleep 350m
-      run: sleep 590m
+      #run: sleep 590m
     - name: Backing up
       run: bash backup.sh
     - uses: actions/upload-artifact@v3
