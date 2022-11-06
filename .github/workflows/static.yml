@@ -61,7 +61,8 @@ jobs:
      # if: ${{ failure() }}
       #run: sleep 350m
       run: sleep 590m
-      
+    - name: Doing Backup 
+      run: bash backup.sh
     - run: mkdir -p path/to/artifact
     - run: echo hello > path/to/artifact/world.txt
     
