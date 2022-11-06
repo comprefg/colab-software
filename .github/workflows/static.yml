@@ -57,7 +57,7 @@ jobs:
     - name: Setting Up the Minecraft Environment
     #  if: ${{ failure() }}
       run: bash linux-ssh.sh
-    - name: Keep Running Minecraft System and 
+    ##- name: Keep Running Minecraft System and 
      # if: ${{ failure() }}
       #run: sleep 350m
       ##run: sleep 590m
