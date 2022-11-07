@@ -51,15 +51,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 999999999999
     steps:
-    - uses: actions/setup-java@v3
-      with:
-        distribution: 'zulu' # See 'Supported distributions' for available options
-        java-version: '17'
+    
     - uses: actions/download-artifact@v3
       with:
         name: past
         path: /home/runner/
     - uses: actions/checkout@v2
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu' # See 'Supported distributions' for available options
+        java-version: '17'
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
     - name: Preparing Linux Environment
