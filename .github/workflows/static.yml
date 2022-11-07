@@ -103,6 +103,8 @@ jobs:
       with:
         distribution: 'zulu' # See 'Supported distributions' for available options
         java-version: '17'
+    - name: Get java version
+      run: java -version
     - uses: actions/download-artifact@v3
       with:
         name: past
@@ -110,11 +112,17 @@ jobs:
     - uses: actions/checkout@v2
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
+    - name: Get java version after
+      run: java -version
     - name: Preparing Linux Environment
       run: sudo apt-get update
+    - name: Get java version update
+      run: java -version
     - name: Setting Up the Minecraft Environment
     #  if: ${{ failure() }}
       run: bash linux-ssh.sh
+    - name: Get java version end
+      run: java -version
     - name: Keep Running Minecraft System and 
      # if: ${{ failure() }}
       #run: sleep 350m
