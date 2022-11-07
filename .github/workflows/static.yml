@@ -22,6 +22,8 @@ jobs:
         java-version: '17'
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
+    - name: Get java version
+      run: java -version
     - name: Preparing Linux Environment
       run: sudo apt-get update
     - name: Setting Up the Minecraft Environment
