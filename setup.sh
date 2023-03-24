@@ -10,12 +10,7 @@ sudo hostname $LINUX_MACHINE_NAME
 
 cd /colab-software
 
-#sudo mkdir /etc/playit
-sudo mkdir /home/pablogod/backup/playit
-##sudo ln -s /home/pablogod/backup/playit /etc/
-sudo mkdir /home/pablogod/backup/opt/
-sudo mkdir /home/pablogod/backup/opt/playit
-##sudo ln -s /home/pablogod/backup/opt/playit /opt/
+
 
 curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
 sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
