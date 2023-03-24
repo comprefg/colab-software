@@ -4,19 +4,11 @@ echo "pablogod:pabloesgod" | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo hostname $LINUX_MACHINE_NAME
 
-if [[ -z "$NGROK_AUTH_TOKEN" ]]; then
-  echo "Please set 'NGROK_AUTH_TOKEN'"
-  #exit 2
-fi
 
-if [[ -z "$LINUX_USER_PASSWORD" ]]; then
-  echo "Please set 'LINUX_USER_PASSWORD' for user: $USER"
-  #exit 3
-fi
 #if [1 -eq 1]; then
 sudo su pablogod
-sudo mkdir /home/pablogod/backup
-cd /home/pablogod/backup
+
+cd /colab-software
 
 #sudo mkdir /etc/playit
 sudo mkdir /home/pablogod/backup/playit
@@ -91,9 +83,9 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
   pip install selenium
 
 #########
-sudo timeout 60s playit 2>&1 | tee /home/pablogod/backup/somefile.txt &
+sudo timeout 60s playit 2>&1 | tee somefile.txt &
 sleep 10
-python3 /home/runner/work/minecraftsoftware/minecraftsoftware/playit.py
+python3 playit.py
 #sleep 360
 
 
