@@ -80,7 +80,6 @@ wget -q https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/790/down
 #########
 sudo timeout 60s playit 2>&1 | tee somefile.txt &
 sleep 10
-ls
 python3 playit.py
 #sleep 360
 
@@ -88,5 +87,6 @@ python3 playit.py
 
 #sudo playit
 echo "doing backup"
+sleep 600
 #sudo mv /var/lib/pufferpanel /home/pablogod/backup/pufferpanel
 #sudo tar -zcf past.tar.gz /home/pablogod/backup/
