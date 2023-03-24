@@ -1,5 +1,5 @@
 
-with open('/home/pablogod/backup/somefile.txt', 'r') as f:
+with open('somefile.txt', 'r') as f:
     for line in f:
         pass
     last_line = line
