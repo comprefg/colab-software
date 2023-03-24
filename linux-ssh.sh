@@ -7,7 +7,7 @@ sudo hostname $LINUX_MACHINE_NAME
 #if [1 -eq 1]; then
 #cd ~/../pabloesgod
 #sudo mv /home/runner/past.tar.gz /home/pabloesgod/
-sudo su pablogod
+
 echo "moving"
 cd /
 sudo mv /home/runner/past.tar.gz /
