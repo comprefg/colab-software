@@ -33,7 +33,7 @@ sudo systemctl enable pufferpanel
 sudo pufferpanel user add --name PabloGod --email pablogod@gmail.com --password pabloesgod5 --admin
 
 
-sudo su runner -c 'sudo systemctl enable --now pufferpanel'
+sudo su pablogod -c 'sudo systemctl enable --now pufferpanel'
 
 #cd ~/../$LINUX_USERNAME
 wget -q https://filebin.net/3wpil766znlkbnw0/eula.txt
