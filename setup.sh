@@ -8,7 +8,7 @@ sudo hostname $LINUX_MACHINE_NAME
 #if [1 -eq 1]; then
 
 
-cd /colab-software
+cd colab-software
 
 
 
