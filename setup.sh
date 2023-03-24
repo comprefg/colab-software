@@ -6,7 +6,7 @@ sudo hostname $LINUX_MACHINE_NAME
 
 
 #if [1 -eq 1]; then
-sudo su pablogod
+
 
 cd /colab-software
 
