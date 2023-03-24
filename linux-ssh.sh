@@ -9,6 +9,7 @@ sudo hostname $LINUX_MACHINE_NAME
 #sudo mv /home/runner/past.tar.gz /home/pabloesgod/
 
 echo "moving"
+ls
 cd /
 sudo mv /home/runner/past.tar.gz /
 echo "extracting"
